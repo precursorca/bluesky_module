@@ -8,3 +8,10 @@ table:
         i18n_header: serial
     -   column: bluesky.version
         i18n_header: bluesky.column.version
+    -   column: bluesky_vnclocalonly_enabled
+        i18n_header: blueksy.column.vnclocalonly_enabled
+        formatter: binaryYesNo
+    -   column: bluesky_passwordauth_enabled
+        i18n_header: blueksy.column.passwordauth_enabled
+        formatter: binaryYesNo
+
