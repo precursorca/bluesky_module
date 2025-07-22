@@ -5,18 +5,17 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 
 class Bluesky2025072200001AddSecurityWidgets.php extends Migration
 {
-    private $tableName = 'bluesky';
-
     public function up()
     {
         $capsule = new Capsule();
         $capsule::schema()->table($this->tableName, function (Blueprint $table) {
-            // Example values, please visit https://laravel.com/docs/5.5/migrations#modifying-columns
-            // $table->string('example_string', 50)->change();
-            // $table->integer('example_integer')->nullable()->change();
-            // $table->string('new_column');
+            $table->boolean('vnclocalonly')->nullable();
+            $table->boolean('passwordauth')->nullable();
+
             
-            // $table->index('new_column');
+            $table->index('vnclocalonly');
+            $table->index('passwordauth');
+
         });
     }
     
@@ -24,10 +23,8 @@ class Bluesky2025072200001AddSecurityWidgets.php extends Migration
     {
         $capsule = new Capsule();
         $capsule::schema()->table($this->tableName, function (Blueprint $table) {
-            // $table->string('example_string', 100)->change();
-            // $table->integer('example_integer')->change();
-
-            // $table->dropIndex('bluesky_new_column_index');
+            $table->dropColumn('vnclocalonly');
+            $table->dropColumn('passwordauth');
         });
     }
 }
