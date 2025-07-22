@@ -6,10 +6,14 @@
 
 ![BlueSky Module Report](BlueSky_module.png)
 
-Reports on BlueSky installs.
-(see: https://github.com/sphen13/BlueSky)
+Reports on BlueSky installs and shows some optional advanced security info.
+(see: https://github.com/BlueSkyTools/BlueSkyConnect)
 
 Retrieves information from the preferences file /var/bluesky/preference.plist.
+And checks for VNC LocalHost Only and Password Authentication settings.
+Setting up VNC Localhost Only would be more secure,
+as would turning off Password Authentication in favour of SSH Keys.
+The techniques for these methods were provided by Stefan Oberle in the BlueSky Connect Wiki.
 
 The following information is stored in the table:
 
@@ -22,7 +26,7 @@ The output file is removed if the preferences file no longer exists so that new 
 
 ## Updates
 
-* July 22, 2025 Version 1.1.0 Added widgets for VNCLOCALONLY and PASSWORDAUTH based on Advanced techniques suggested in the Wiki by Stefan Oberle
+* July 22, 2025 Version 1.1.0 Added widgets for VNC LocalHost ONLY and Password Authentication based on Advanced techniques suggested in the Wiki by Stefan Oberle
 * June 3, 2025 Version 1.0.2 Updated composer json for packagist compatibility.
 * July 6, 2021 Version 1.0.1 Correct test for -f file instead of -d directory. 
 * April 5, 2021 Version 1.0 
