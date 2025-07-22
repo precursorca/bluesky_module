@@ -9,9 +9,8 @@ table:
     -   column: bluesky.version
         i18n_header: bluesky.column.version
     -   column: bluesky.vnclocalonly
-        i18n_header: blueksy.column.vnclocalonly
+        i18n_header: bluesky.column.vnclocalonly
         formatter: binaryYesNo
     -   column: bluesky.passwordauth
-        i18n_header: blueksy.column.passwordauth
+        i18n_header: bluesky.column.passwordauth
         formatter: binaryYesNo
-
