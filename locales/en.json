@@ -13,7 +13,7 @@
     "widget": {
         "title": "BlueSky",
         "version_title": "Version",
-        "vnclocalonly_title": "VNC Local Only",
+        "vnclocalonly_title": "VNC LocalHost Only",
         "passwordauth_title": "Password Authentication",
    		"total": "Total"      
     }
