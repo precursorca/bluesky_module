@@ -10,4 +10,4 @@ buttons:
     class: btn-success
   - label: "0"
     i18n_label: off
-    class: btn-warning
+    class: btn-danger
