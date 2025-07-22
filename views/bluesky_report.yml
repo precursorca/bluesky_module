@@ -1,3 +1,5 @@
 row1:
     bluesky: {  }
     bluesky_version: {  }
+    bluesky_vnclocalonly: {  }
+    bluesky_passwordauth: {  }

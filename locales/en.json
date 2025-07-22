@@ -1,6 +1,8 @@
 {
     "column": {
-        "version": "Version"
+        "version": "Version",
+        "vnclocalonly": "VNC LocalHost Only",
+        "passwordauth": "Password Authentication"
     },
     "listing": {
         "title": "BlueSky"
@@ -9,10 +11,11 @@
         "title": "BlueSky"
     },
     "title": "BlueSky",
-    "total": "total",    
     "widget": {
         "title": "BlueSky",
         "version_title": "Version",
-   		"total": "Total"      
+        "vnclocalonly_title": "VNC LocalHost Only",
+        "passwordauth_title": "Password Authentication",
+  		"total": "Total"      
     }
 }
