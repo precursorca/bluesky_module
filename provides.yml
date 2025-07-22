@@ -15,3 +15,7 @@ widgets:
         view: bluesky_widget
     bluesky_version:
         view: bluesky_version_widget
+    bluesky_vnclocalonly:
+        view: bluesky_vnclocalonly_widget
+    bluesky_passwordauth:
+        view: bluesky_passwordauth_widget
