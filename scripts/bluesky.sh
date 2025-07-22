@@ -22,8 +22,6 @@ if grep -iqE '^\s*#?\s*PasswordAuthentication\b.*\byes\s*$' /etc/ssh/ssh_config;
     PASSWORDAUTH="1"
 elif grep -iqE '^\s*#?\s*PasswordAuthentication\b.*\bno\s*$' /etc/ssh/ssh_config; then
     PASSWORDAUTH="0"
-else
-    # echo "No PasswordAuthentication line ending in yes/no found."
 fi
 #END TEST FOR PASSWORDauth
 
