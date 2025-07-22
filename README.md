@@ -18,6 +18,9 @@ The techniques for these methods were provided by Stefan Oberle in the BlueSky C
 The following information is stored in the table:
 
 * version - The BlueSky version
+* VNC Localhost only (you may enable this feature to increase security - see the Wiki)
+* Password Authentication (you may turn this off when using SSH keys for added security - see the Wiki)
+
 
 ## Notes
 
