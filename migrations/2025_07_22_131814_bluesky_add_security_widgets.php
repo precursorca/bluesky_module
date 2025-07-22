@@ -3,19 +3,20 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Capsule\Manager as Capsule;
 
-class Bluesky2025072200001AddSecurityWidgets.php extends Migration
+class Bluesky2025072200003BlueskyAddSecurityWidgets extends Migration
 {
+    private $tableName = 'bluesky';
+
     public function up()
     {
         $capsule = new Capsule();
         $capsule::schema()->table($this->tableName, function (Blueprint $table) {
-            $table->boolean('vnclocalonly')->nullable();
+           $table->boolean('vnclocalonly')->nullable();
             $table->boolean('passwordauth')->nullable();
 
             
             $table->index('vnclocalonly');
             $table->index('passwordauth');
-
         });
     }
     
