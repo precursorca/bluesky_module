@@ -10,11 +10,10 @@ SEPARATOR=' = '
 SERIAL=$(/usr/libexec/PlistBuddy -c "print :'serial'" /var/bluesky/settings.plist)
 VERSION=$(/usr/libexec/PlistBuddy -c "print :'version'" /var/bluesky/settings.plist)
 #TEST FOR VNCOnlyLocal
-if defaults read /Library/Preferences/com.apple.RemoteManagement.plist VNCOnlyLocalConnections
-&> /dev/null; then
-VNCLOCALONLY="0"
+if defaults read /Library/Preferences/com.apple.RemoteManagement.plist VNCOnlyLocalConnections &> /dev/null; then
+    VNCLOCALONLY=$(defaults read /Library/Preferences/com.apple.RemoteManagement.plist VNCOnlyLocalConnections)
 else
-VNCLOCALONLY=$(defaults read /Library/Preferences/com.apple.RemoteManagement.plist VNCOnlyLocalConnections)
+    VNCLOCALONLY="0"
 fi
 #END TEST for VNCOnlyLocal
 #TEST FOR PASSWORDauth
