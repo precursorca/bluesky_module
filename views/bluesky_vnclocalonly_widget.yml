@@ -1,6 +1,6 @@
 type: button
 widget_id: bluesky-vnclocalonly-button-widget
-api_url: /module/bluesky/get_list/vnclocalonly_enabled
+api_url: /module/bluesky/get_list/vnclocalonly
 i18n_title: bluesky.widget.vnclocalonly_title
 icon: fa-eye-slash
 listing_link: /show/listing/bluesky/bluesky
