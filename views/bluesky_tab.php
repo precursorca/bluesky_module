@@ -1,7 +1,11 @@
 <div id="bluesky-tab"></div>
 <h2 data-i18n="bluesky.title"></h2>
 
-<table id="bluesky-tab-table"></table>
+<table id="bluesky-tab-table"
+       class="table table-responsive table-striped table-condensed"
+       style="max-width: 400px;">
+    <tbody></tbody>
+</table>
 
 <script>
 $(document).on('appReady', function(){
