@@ -1,6 +1,6 @@
 # BlueSky module
 
-> v. 1.1.1 
+> v. 1.1.4 
 > November 21, 2025 
 > Alex Narvey / Precursor.ca  
 
@@ -29,7 +29,10 @@ The output file is removed if the preferences file no longer exists so that new 
 
 ## Updates
 
-* November 21, 2025 Version 1.1.1 Improved formatting of client tab.
+* November 21, 2025 Version 1.1.4 Improved formatting of client tab.
+* August 1, 2025 Version 1.1.3 Improved the VNCLocalOnly Test
+* August 1, 2025 Version 1.1.2 Correct API url in new widgets
+* August 1, 2025 Version 1.1.1 Corrects a syntax error in the yml of a widget
 * July 22, 2025 Version 1.1.0 Added widgets for VNC LocalHost ONLY and Password Authentication based on Advanced techniques suggested in the Wiki by Stefan Oberle
 * June 3, 2025 Version 1.0.2 Updated composer json for packagist compatibility.
 * July 6, 2021 Version 1.0.1 Correct test for -f file instead of -d directory. 
