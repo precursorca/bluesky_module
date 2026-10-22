@@ -10,6 +10,7 @@ class Bluesky_model extends Eloquent
 
     protected $fillable = [
       'serial_number',
+      'blueskyid',
       'version',
       'vnclocalonly',
       'passwordauth',
