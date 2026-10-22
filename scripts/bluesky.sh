@@ -9,6 +9,7 @@ OUTPUT_FILE="${CACHEDIR}bluesky.txt"
 SEPARATOR=' = '
 SERIAL=$(/usr/libexec/PlistBuddy -c "print :'serial'" /var/bluesky/settings.plist)
 VERSION=$(/usr/libexec/PlistBuddy -c "print :'version'" /var/bluesky/settings.plist)
+BLUESKYID=$(/usr/libexec/PlistBuddy -c "print :'portcache'" /var/bluesky/settings.plist)
 #TEST FOR VNCOnlyLocal
 if defaults read /Library/Preferences/com.apple.RemoteManagement.plist VNCOnlyLocalConnections &> /dev/null; then
     VNCLOCALONLY=$(defaults read /Library/Preferences/com.apple.RemoteManagement.plist VNCOnlyLocalConnections)
@@ -30,6 +31,7 @@ if [ -f "/var/bluesky/settings.plist" ]; then
 # Output data here
 echo "version${SEPARATOR}$VERSION" > ${OUTPUT_FILE}
 echo "serial${SEPARATOR}$SERIAL" >> ${OUTPUT_FILE}
+echo "blueskyid${SEPARATOR}$BLUESKYID" >> ${OUTPUT_FILE}
 echo "vnclocalonly${SEPARATOR}$VNCLOCALONLY" >> ${OUTPUT_FILE}
 echo "passwordauth${SEPARATOR}$PASSWORDAUTH" >> ${OUTPUT_FILE}
 # END Output data
