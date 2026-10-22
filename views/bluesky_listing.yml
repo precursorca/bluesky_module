@@ -6,6 +6,8 @@ table:
         tab_link: bluesky
     -   column: reportdata.serial_number
         i18n_header: serial
+    -   column: bluesky.blueskyid
+        i18n_header: bluesky.column.blueskyid
     -   column: bluesky.version
         i18n_header: bluesky.column.version
     -   column: bluesky.vnclocalonly
