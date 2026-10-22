@@ -1,5 +1,6 @@
 {
     "column": {
+        "blueskyid": "ID",
         "version": "Version",
         "vnclocalonly": "VNC LocalHost Only",
         "passwordauth": "Password Authentication"
