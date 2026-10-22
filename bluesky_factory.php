@@ -7,6 +7,7 @@
 $factory->define(Bluesky_model::class, function (Faker\Generator $faker) {
 
     return [
+        'blueskyid' => $faker->numerify('####'),
         'version' => $faker->word(),
         'vnclocalonly' => $faker->word(),
         'passwordauth' => $faker->word(),
