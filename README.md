@@ -1,7 +1,7 @@
 # BlueSky module
 
-> v. 1.1.4 
-> November 21, 2025 
+> v. 1.1.5 
+> October 22, 2026 
 > Alex Narvey / Precursor.ca  
 
 ![BlueSky Module Report](BlueSky_module.png)
@@ -18,6 +18,7 @@ The techniques for these methods were provided by Stefan Oberle in the BlueSky C
 The following information is stored in the table:
 
 * version - The BlueSky version
+* blueskyid - The BlueSky ID #
 * VNC Localhost only (you may enable this feature to increase security - see the Wiki)
 * Password Authentication (you may turn this off when using SSH keys for added security - see the Wiki)
 
@@ -29,6 +30,7 @@ The output file is removed if the preferences file no longer exists so that new 
 
 ## Updates
 
+* October 22, 2026 Version 1.1.5 Added the Bluesky ID # to the listing.
 * November 21, 2025 Version 1.1.4 Improved formatting of client tab.
 * August 1, 2025 Version 1.1.3 Improved the VNCLocalOnly Test
 * August 1, 2025 Version 1.1.2 Correct API url in new widgets
