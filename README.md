@@ -5,8 +5,8 @@
 > Alex Narvey / Precursor.ca  
 
 ![BlueSky Module Report](BlueSky_module.png)
-![BlueSky Module Tab](BlueSky_tab.png)
-![BlueSky Module Listing](BlueSky_listing.png)
+![BlueSky Module Tab](Bluesky_tab.png)
+![BlueSky Module Listing](Bluesky_listing.png)
 
 Reports on BlueSky installs and shows some optional advanced security info.
 (see: https://github.com/BlueSkyTools/BlueSkyConnect)
