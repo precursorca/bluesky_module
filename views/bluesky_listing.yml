@@ -1,29 +1,110 @@
-i18n_title: bluesky.listing.title
-js_link: module/bluesky/js/format_bluesky
-js_init: initializeBlueskyConfig()
-table:
-    -   column: machine.computer_name
-        i18n_header: listing.computername
-        formatter: clientDetail
-        tab_link: bluesky
-    -   column: reportdata.serial_number
-        i18n_header: serial
-    -   column: bluesky.blueskyid
-        i18n_header: bluesky.column.blueskyid
-    -   column: bluesky.blueskyid
-        i18n_header: bluesky.column.bluesky_ssh
-        formatter: blueskySshLink
-    -   column: bluesky.blueskyid
-        i18n_header: bluesky.column.bluesky_vnc
-        formatter: blueskyVncLink
-    -   column: bluesky.blueskyid
-        i18n_header: bluesky.column.bluesky_scp
-        formatter: blueskyScpLink
-    -   column: bluesky.version
-        i18n_header: bluesky.column.version
-    -   column: bluesky.vnclocalonly
-        i18n_header: bluesky.column.vnclocalonly
-        formatter: binaryYesNo
-    -   column: bluesky.passwordauth
-        i18n_header: bluesky.column.passwordauth
-        formatter: binaryYesNo
+HTML
+<div id="bluesky-tab"></div>
+<h2 data-i18n="bluesky.title"></h2>
+
+<table id="bluesky-tab-table"
+       class="table table-responsive table-striped table-condensed"
+       style="max-width: 400px;">
+    <tbody></tbody>
+</table>
+
+<script>
+$(document).on('appReady', function () {
+    $.getJSON(
+        appUrl + '/module/bluesky/get_data/' + serialNumber,
+        function (data) {
+            var table = $('#bluesky-tab-table');
+            var tbody = table.find('tbody');
+
+            tbody.empty();
+
+            // Render ordinary fields, excluding blueskyid for now.
+            $.each(data, function (key, val) {
+                if (key === 'blueskyid') {
+                    return;
+                }
+
+                var th = $('<th>').text(
+                    i18n.t('bluesky.column.' + key)
+                );
+                var td = $('<td>').text(
+                    val == null ? '' : val
+                );
+
+                tbody.append(
+                    $('<tr>').append(th, td)
+                );
+            });
+
+            // Add action links if the backend returned a Bluesky ID.
+            var blueskyid = data.blueskyid;
+
+            if (!blueskyid) {
+                return;
+            }
+
+            var actions = [
+                { key: 'bluesky_ssh', action: 'ssh',
+                  icon: 'fa fa-terminal' },
+                { key: 'bluesky_vnc', action: 'vnc',
+                  icon: 'fa fa-desktop' },
+                { key: 'bluesky_scp', action: 'scp',
+                  icon: 'fa fa-upload' }
+            ];
+
+            // Fetch the same configuration used by the listing.
+            $.getJSON(
+                appUrl + '/module/bluesky/get_config'
+            ).done(function (config) {
+                if (!config.base_url) {
+                    console.error(
+                        'BLUESKY_BASE_URL is not configured'
+                    );
+                    return;
+                }
+
+                $.each(actions, function (_, item) {
+                    var url = 'bluesky://' + config.base_url + '?' +
+                        'blueskyid=' +
+                        encodeURIComponent(blueskyid) +
+                        '&user=' +
+                        '&action=' +
+                        encodeURIComponent(item.action);
+
+                    var link = $('<a>')
+                        .attr('href', url)
+                        .attr(
+                            'title',
+                            'Open ' + item.action.toUpperCase()
+                        )
+                        .attr(
+                            'aria-label',
+                            'Open ' + item.action.toUpperCase()
+                        );
+
+                    link.append(
+                        $('<i>')
+                            .addClass(item.icon)
+                            .attr('aria-hidden', 'true')
+                    );
+
+                    var th = $('<th>').text(
+                        i18n.t('bluesky.column.' + item.key)
+                    );
+
+                    var td = $('<td>').append(link);
+
+                    tbody.append(
+                        $('<tr>').append(th, td)
+                    );
+                });
+            }).fail(function () {
+                console.error(
+                    'Unable to load Bluesky configuration'
+                );
+            });
+        }
+    );
+});
+</script>
+Copied
