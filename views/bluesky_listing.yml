@@ -1,4 +1,6 @@
 i18n_title: bluesky.listing.title
+js_link: module/bluesky/js/format_bluesky
+js_init: initializeBlueskyConfig()
 table:
     -   column: machine.computer_name
         i18n_header: listing.computername
@@ -8,6 +10,15 @@ table:
         i18n_header: serial
     -   column: bluesky.blueskyid
         i18n_header: bluesky.column.blueskyid
+    -   column: bluesky.blueskyid
+        i18n_header: bluesky.column.bluesky_ssh
+        formatter: blueskySshLink
+    -   column: bluesky.blueskyid
+        i18n_header: bluesky.column.bluesky_vnc
+        formatter: blueskyVncLink
+    -   column: bluesky.blueskyid
+        i18n_header: bluesky.column.bluesky_scp
+        formatter: blueskyScpLink
     -   column: bluesky.version
         i18n_header: bluesky.column.version
     -   column: bluesky.vnclocalonly
