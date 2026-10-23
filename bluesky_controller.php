@@ -64,4 +64,20 @@ class Bluesky_controller extends Module_controller
             	->toLabelcount()
        );
     }
+    
+    public function get_config()
+	{
+    	$baseUrl = env('BLUESKY_BASE_URL');
+
+    	if (empty($baseUrl)) {
+        	jsonView([
+            	'error' => 'BLUESKY_BASE_URL is not configured',
+        	]);
+        	return;
+    	}
+
+    	jsonView([
+        	'base_url' => $baseUrl,
+    	]);
+	}
 } 
