@@ -1,6 +1,9 @@
 {
     "column": {
         "blueskyid": "ID",
+        "bluesky_ssh": "SSH",
+        "bluesky_vnc": "VNC",
+        "bluesky_scp": "SCP",
         "version": "Version",
         "vnclocalonly": "VNC LocalHost Only",
         "passwordauth": "Password Authentication"
