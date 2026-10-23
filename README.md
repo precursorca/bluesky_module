@@ -1,10 +1,12 @@
 # BlueSky module
 
-> v. 1.1.5 
-> October 22, 2026 
+> v. 1.1.6 
+> October 23, 2026 
 > Alex Narvey / Precursor.ca  
 
 ![BlueSky Module Report](BlueSky_module.png)
+![BlueSky Module Tab](BlueSky_tab.png)
+![BlueSky Module Listing](BlueSky_listing.png)
 
 Reports on BlueSky installs and shows some optional advanced security info.
 (see: https://github.com/BlueSkyTools/BlueSkyConnect)
@@ -14,6 +16,12 @@ And checks for VNC LocalHost Only and Password Authentication settings.
 Setting up VNC Localhost Only would be more secure,
 as would turning off Password Authentication in favour of SSH Keys.
 The techniques for these methods were provided by Stefan Oberle in the BlueSky Connect Wiki.
+
+Provides clickable links in the Listing page and the Summary Tab for SSH, VNC, and SCP.
+THIS REQUIRES ADDING YOUR BLUESKY INSTANCE INTO THE .ENV FILE:
+
+# example .env file addition:
+`BLUESKY_BASE_URL="bluesky.example.com"` (replace bluesky.example.com with the url for your bluesky server).
 
 The following information is stored in the table:
 
@@ -30,6 +38,7 @@ The output file is removed if the preferences file no longer exists so that new 
 
 ## Updates
 
+* October 23, 2026 Version 1.1.6 Added clickable links for SSH, NVC, and SCP to the listing page and the tab.
 * October 22, 2026 Version 1.1.5 Added the Bluesky ID # to the listing.
 * November 21, 2025 Version 1.1.4 Improved formatting of client tab.
 * August 1, 2025 Version 1.1.3 Improved the VNCLocalOnly Test
