@@ -18,9 +18,10 @@ as would turning off Password Authentication in favour of SSH Keys.
 The techniques for these methods were provided by Stefan Oberle in the BlueSky Connect Wiki.
 
 Provides clickable links in the Listing page and the Summary Tab for SSH, VNC, and SCP.
+The clickable links work well with the Bluesky Admin applescript app. They do not work properly with the newer BlueConnect swift app.
 THIS REQUIRES ADDING YOUR BLUESKY INSTANCE INTO THE .ENV FILE:
 
-# example .env file addition:
+## example .env file addition:
 `BLUESKY_BASE_URL="bluesky.example.com"` (replace bluesky.example.com with the url for your bluesky server).
 
 The following information is stored in the table:
