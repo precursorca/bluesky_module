@@ -5,7 +5,9 @@
 > Alex Narvey / Precursor.ca  
 
 ![BlueSky Module Report](BlueSky_module.png)
-![BlueSky Module Tab](Bluesky_tab.png)
+<div style="width: 60%; height: 60%">
+  ![BlueSky Module Tab](Bluesky_tab.png)
+</div>
 ![BlueSky Module Listing](Bluesky_listing.png)
 
 Reports on BlueSky installs and shows some optional advanced security info.
