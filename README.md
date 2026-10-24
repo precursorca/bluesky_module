@@ -5,7 +5,6 @@
 > Alex Narvey / Precursor.ca  
 
 ![BlueSky Module Report](BlueSky_module.png)
- ![BlueSky Module Tab](Bluesky_tab.png)
 <img src="https://raw.githubusercontent.com/precursorca/bluesky_module/refs/heads/main/Bluesky_tab.png" width="424" height="268">
 ![BlueSky Module Listing](Bluesky_listing.png)
 
